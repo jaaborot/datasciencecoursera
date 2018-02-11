@@ -1,2 +1,3 @@
-# datasciencecoursera
-My Coursera Data Science Course Repo
+# README
+
+This repository contains the project sources for the Coursera course _Getting and Cleaning Data_. Within the top directory, you will find the *run_analysis.R* file for tidying the given messy data set in the course project. Given the project input data set in the same directory, executing the run_analysis.R script file will generate a tidy data set in _tidy_dataset2.txt_ file. A *CodeBook* is also provided in the top level directory. The codebook describes the tidy data tidy_dataset2, the transformations executed on the input messy data set to generate the tidy_dataset2.txt file, and the definition of the variables in tidy_dataset2.
