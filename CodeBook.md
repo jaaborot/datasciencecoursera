@@ -39,31 +39,31 @@ In order to generate the tidy_dataset2 from the initial data sets, several trans
 
 Variables in the tidy data set tidy_dataset2 are defined and indexed as follows:
 
-*\[1\] "subject" - an identifier of the subject carried out the experiment; with values ranging from 1 to 30
-*\[2\] "activity" - the activity of the subject during the experiment
+* \[1\] "subject" - an identifier of the subject carried out the experiment; with values ranging from 1 to 30
+* \[2\] "activity" - the activity of the subject during the experiment
 
-*\[3:563\] - Given the captured time domain acceleration and gyro signals tAcc-XYZ and tGyro-XYZ, derived body and gravity acceleration signal tBodyAcc-XYZ and tGravityAcc-XYZ, derived jerk signals tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ, calculated magnitude of the tri-axis signals tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag, FFT-based generated variables fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag, set of estimated variables were estimated: mean value (mean()), standard deviation (std()), median absolute deviation (mad()), minimum value in array (min()), signal magnitude aread (sma()), energy measure (energy()), interquartile range (iqr()), signal entropy (entropy()), autoregression coefficients (arCoeff()), correlation coefficient between two signals (correlation()), index of the frequency component with the largest magnitude (maxInds()), mean frequency (meanFreq()), skewness of the frequency domain signal (skewness()), kurtosis of the frequency domain signal (kurtosis()), energy of a frequency interval within the 64 bins of the FFT window (bandsEnergy()), angle between vectors (angle()).
+* \[3:563\] - Given the captured time domain acceleration and gyro signals tAcc-XYZ and tGyro-XYZ, derived body and gravity acceleration signal tBodyAcc-XYZ and tGravityAcc-XYZ, derived jerk signals tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ, calculated magnitude of the tri-axis signals tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag, FFT-based generated variables fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag, set of estimated variables were estimated: mean value (mean()), standard deviation (std()), median absolute deviation (mad()), minimum value in array (min()), signal magnitude aread (sma()), energy measure (energy()), interquartile range (iqr()), signal entropy (entropy()), autoregression coefficients (arCoeff()), correlation coefficient between two signals (correlation()), index of the frequency component with the largest magnitude (maxInds()), mean frequency (meanFreq()), skewness of the frequency domain signal (skewness()), kurtosis of the frequency domain signal (kurtosis()), energy of a frequency interval within the 64 bins of the FFT window (bandsEnergy()), angle between vectors (angle()).
 
-*\[564:947\] - the 128-feature vector corresponding to the body acceleration in the x, y and z axis
-*\[948:1331\] - the 128-feature vector corresponding to the body gyro acceleration in the x, y and z axis
-*\[1332:1715\] - the 128-feature vector corresponding to the total acceleration in the x, y and z axis
-*\[1716:3428\] - the computed mean value for each variable in column 3 to column 1715 by grouping of subject and activity
+* \[564:947\] - the 128-feature vector corresponding to the body acceleration in the x, y and z axis
+* \[948:1331\] - the 128-feature vector corresponding to the body gyro acceleration in the x, y and z axis
+* \[1332:1715\] - the 128-feature vector corresponding to the total acceleration in the x, y and z axis
+* \[1716:3428\] - the computed mean value for each variable in column 3 to column 1715 by grouping of subject and activity
 
 index | variable
 ------|---------
 "1" | "subject"
-"2" "activity"
-"3" "timeBodyAccmeanX"
-"4" "timeBodyAccmeanY"
-"5" "timeBodyAccmeanZ"
-"6" "timeBodyAccstdX"
-"7" "timeBodyAccstdY"
-"8" "timeBodyAccstdZ"
-"9" "timeBodyAccmadX"
-"10" "timeBodyAccmadY"
-"11" "timeBodyAccmadZ"
-"12" "timeBodyAccmaxX"
-"13" "timeBodyAccmaxY"
+"2" | "activity"
+"3" | "timeBodyAccmeanX"
+"4" | "timeBodyAccmeanY"
+"5" | "timeBodyAccmeanZ"
+"6" | "timeBodyAccstdX"
+"7" | "timeBodyAccstdY"
+"8" | "timeBodyAccstdZ"
+"9" | "timeBodyAccmadX"
+"10" | "timeBodyAccmadY"
+"11"| "timeBodyAccmadZ"
+"12"| "timeBodyAccmaxX"
+"13"| "timeBodyAccmaxY"
 "14" "timeBodyAccmaxZ"
 "15" "timeBodyAccminX"
 "16" "timeBodyAccminY"
