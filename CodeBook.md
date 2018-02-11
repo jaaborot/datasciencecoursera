@@ -10,8 +10,8 @@ The tidy data set in **tidy\_daset2.txt** is composed of **10299** rows and **34
 ## Transformations for Tidying Data
 
 In order to generate the tidy_dataset2 from the initial data sets, several transformations are necessary. These include
-l. combining the columns of X_test with that of y_test resulting to an intermediate yX_test data set
-l. combining the columns of X_train with those of y_train resulting to an intermediate yX_train data set
+1. combining the columns of X_test with that of y_test resulting to an intermediate yX_test data set
+2. combining the columns of X_train with those of y_train resulting to an intermediate yX_train data set
 3. combining the rows of yX_test with that of yX_train resulting to an intermediate train_test_dataset data set
 4. combining the columns of the test data sets for the inertial signals body\_acc\_{x,y,z}\_test, body\_gyro\_{x,y,z}\_test, and total\_acc\_{x,y,z}\_test resulting to an intermediate inertial_signals_train_dataset data set
 5. combining the columns of the training data sets for the body\_acc\_{x,y,z}\_train, body\_gyro\_{x,y,z}\_train, and total\_acc\_{x,y,z}\_train and combining the rows of these combined data sets with the rows of the inertial_signals_train_data data set resulting to an intermediate inertial_signals_dataset data set
@@ -50,7 +50,7 @@ Variables in the tidy data set tidy_dataset2 are defined and indexed as follows:
 *\[1716:3428\] - the computed mean value for each variable in column 3 to column 1715 by grouping of subject and activity
 
 index | variable
-______|_________
+------|---------
 "1" | "subject"
 "2" "activity"
 "3" "timeBodyAccmeanX"
