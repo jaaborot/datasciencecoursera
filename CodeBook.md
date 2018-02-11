@@ -18,12 +18,12 @@ In order to generate the tidy_dataset2 from the initial data sets, several trans
 5. combining the columns of the training data sets for the body\_acc\_{x,y,z}\_train, body\_gyro\_{x,y,z}\_train, and total\_acc\_{x,y,z}\_train and combining the rows of these combined data sets with the rows of the inertial_signals_train_data data set resulting to an intermediate inertial_signals_dataset data set
 6. combining the columns of the intermediate train_test_dataset data set with the columns of the intermediate inertial_signals_dataset data set resulting to a tidy data set tidy_dataset1
 7. renaming the columns of tidy_dataset1 into more meaningful variable names
- 1. column 1 to “subject”
- 7.2. column 2 to “activity”
- 7.3. columns 3 to 563 into the 561 features defined in features.txt, e.g. "timeBodyAccmeanX”, "timeBodyAccmeanY”, …, "angleZgravityMean"
-  1. characters “(“, “)”, “,” and “-“ are removed from the variable names
-  2. beginning characters “t” and “f” of feature names are replaced with “time” and “frequency” respectively 
-  3. feature names which correspond to the bands energy measurement of a frequency interval are sampled thrice and so feature names for each sample are added with “{1st, 2nd, 3rd}Sample” string, e.g. "frequencyBodyAccJerkbandsEnergy1stSample18”, "frequencyBodyAccJerkbandsEnergy2ndSample18”, "frequencyBodyAccJerkbandsEnergy3rdSample18”
+    1. column 1 to “subject”
+    2. column 2 to “activity”
+    3. columns 3 to 563 into the 561 features defined in features.txt, e.g. "timeBodyAccmeanX”, "timeBodyAccmeanY”, …, "angleZgravityMean"
+        1. characters “(“, “)”, “,” and “-“ are removed from the variable names
+        2. beginning characters “t” and “f” of feature names are replaced with “time” and “frequency” respectively 
+        3. feature names which correspond to the bands energy measurement of a frequency interval are sampled thrice and so feature names for each sample are added with “{1st, 2nd, 3rd}Sample” string, e.g. "frequencyBodyAccJerkbandsEnergy1stSample18”, "frequencyBodyAccJerkbandsEnergy2ndSample18”, "frequencyBodyAccJerkbandsEnergy3rdSample18”
   4. columns 564 to 691 to the camelcase format “bodyAccelerationX” appended with the string “Feature” and the index of the feature in the 128-feature vector, e.g. "bodyAccelerationXFeature1”, "bodyAccelerationXFeature2”, …, "bodyAccelerationXFeature128”
   5. columns 692 to 819 to the camelcase format “bodyAccelerationY” appended with the string “Feature” and the index of the feature in the 128-feature vector, e.g. "bodyAccelerationYFeature1”, "bodyAccelerationYFeature2”, …, "bodyAccelerationYFeature128”
   6. columns 820 to 947 to the camelcase format “bodyAccelerationZ” appended with the string “Feature” and the index of the feature in the 128-feature vector, e.g. "bodyAccelerationZFeature1”, "bodyAccelerationZFeature2”, …, "bodyAccelerationZFeature128”
