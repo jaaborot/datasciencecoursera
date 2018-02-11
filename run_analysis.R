@@ -18,7 +18,7 @@ features$V2[317:330] <- gsub("\\(\\)","2ndSample", features$V2[317:330])
 features$V2[331:344] <- gsub("\\(\\)","3rdSample", features$V2[331:344])
 features$V2[382:395] <- gsub("\\(\\)","1stSample", features$V2[382:395])
 features$V2[396:409] <- gsub("\\(\\)","2ndSample", features$V2[396:409])
-features$V2[331:344] <- gsub("\\(\\)","3rdSample", features$V2[410:423])
+features$V2[410:423] <- gsub("\\(\\)","3rdSample", features$V2[410:423])
 features$V2[461:474] <- gsub("\\(\\)","1stSample", features$V2[461:474])
 features$V2[475:488] <- gsub("\\(\\)","2ndSample", features$V2[475:488])
 features$V2[489:502] <- gsub("\\(\\)","3rdSample", features$V2[489:502])
@@ -258,3 +258,6 @@ for(i in 3:1715){
     colname <- paste0("mean", names(tidy_dataset2[i]))
     tidy_dataset2[[colname]] <- mean(tidy_dataset2[[i]])
 }
+
+write.table(tidy_dataset2, file = "tidy_dataset2.txt", row.names = FALSE)
+write.table(names(tidy_dataset2), file = "names_tidy_dataset2.txt")
