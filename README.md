@@ -4,6 +4,8 @@
 
 This repository contains the project sources for the Coursera course **Module 3: Getting and Cleaning Data**: _Data, Connetivity and Intelligence: Data Science Track_. Within the top directory, you will find the **run_analysis.R** file for tidying the given input data set in the [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). Given that the project input data set is in the same directory, executing the run_analysis.R script file will generate a tidy data set written in a  **tidy_dataset.txt** file. A [codebook](https://github.com/jaaborot/datasciencecoursera/blob/master/CodeBook.md) is also provided in the top level directory of this repository. The codebook provides some details about the input data set, the variables included in an intermediate data set taken from the set of variables of the input data set, and the variables of the final tidy data set.
 
+For any inquiries regarding the cleaning process and its implementation in this project, you may send an email to <jaaborot@up.edu.ph>.
+
 ## Cleaning process
 
 In this section we discuss about the cleaning process applied to the input data set to generate the output tidy data set. We go through each step in the cleaning process by going through sections the in run\_analysis.R script.
@@ -154,7 +156,7 @@ To construct the intermediate data set, we combine the rows of the training data
 train_test_dataset <- rbind(train_dataset_tbl, test_dataset_tbl)
 ```
 
-## Generating the tidy data
+## Generating the tidy data set
 
 The variables of the tidy data set which will be generated correspond to the average of the variables in the generated ```train_test_dataset``` data frame. To construct such data set, we use the ```aggregate(.)``` function of the ```stats``` package in R. We specify as input into the ```aggregate``` function the 3rd up to the last column of the ```train_test_dataset```, the ```activity``` and ```subject``` variables of the ```train_test_dataset``` data frame as grouping elements of the averages, and the ```mean(.)``` function of the base R package as the function to be applied to the variables in ```train_test_dataset```. The resulting data frame is assigned to the ```tidy_dataset``` data frame object.
 
@@ -171,7 +173,7 @@ names(tidy_dataset)[3:length(names(tidy_dataset))] <- paste0(toupper(substring(n
 names(tidy_dataset)[3:length(names(tidy_dataset))] <- paste0("avg", names(tidy_dataset)[3:length(names(tidy_dataset))])
 ```
 
-## Writing the tidy data into a file
+## Writing the tidy data set into a file
 
 Lastly, ```tidy_dataset``` is written into a file using the ```write.table(.)``` function in the ```utils``` package in R. The data set is written into a file ```tidy_dataset.txt```. An auxillary file ```names_tidy_dataset.txt``` is also written into disk. This file contains a list of the variable names in ```tidy_dataset``` for reference purposes.
 
