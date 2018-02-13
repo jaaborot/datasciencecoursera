@@ -120,76 +120,80 @@ Note that the allowable values for the numeric variables are left blank since no
 
 The variables in Table 1 form an intermediary data set for generating the final required tidy data set. The tidy data set is composed of the variables defined in Table 2.
 
-## Table 2: Tidy Data Set
+## Table 2: Tidy Data Set Variables
 
 Variable Name | Variable Type | Allowable Values |
 --------------|---------------|------------------|
-avgtimeBodyAccmeanX | Numeric |        |            
-avgtimeBodyAccmeanY | Numeric |        |
-avgtimeBodyAccmeanZ | Numeric |        |                     
-avgtimeBodyAccstdX  | Numeric |        |                     
-avgtimeBodyAccstdY  | Numeric |        |
-avgtimeBodyAccstdZ  | Numeric |        |
-avgtimeGravityAccmeanX | Numeric |        |                 
-avgtimeGravityAccmeanY | Numeric |        |                
-avgtimeGravityAccmeanZ | Numeric |        |                  
-avgtimeGravityAccstdX | Numeric |        |                 
-avgtimeGravityAccstdY | Numeric |        |
-avgtimeGravityAccstdZ | Numeric |        |                 
-avgtimeBodyAccJerkmeanX | Numeric |        |                
-avgtimeBodyAccJerkmeanY | Numeric |        |                
-avgtimeBodyAccJerkmeanZ | Numeric |        |                 
-avgtimeBodyAccJerkstdX | Numeric |        |                
-avgtimeBodyAccJerkstdY | Numeric |        |                
-avgtimeBodyAccJerkstdZ | Numeric |        |                
-avgtimeBodyGyromeanX | Numeric |        |                   
-avgtimeBodyGyromeanY | Numeric |        |                   
-avgtimeBodyGyromeanZ | Numeric |        |                    
-avgtimeBodyGyrostdX | Numeric |        |                   
-avgtimeBodyGyrostdY | Numeric |        |                     
-avgtimeBodyGyrostdZ | Numeric |        |                   
-avgtimeBodyGyroJerkmeanX | Numeric |        |               
-avgtimeBodyGyroJerkmeanY | Numeric |        |               
-avgtimeBodyGyroJerkmeanZ| Numeric |        |                
-avgtimeBodyGyroJerkstdX | Numeric |        |               
-avgtimeBodyGyroJerkstdY | Numeric |        |                 
-avgtimeBodyGyroJerkstdZ | Numeric |        |                
-avgtimeBodyAccMagmean | Numeric |        |                  
-avgtimeBodyAccMagstd | Numeric |        |                  
-avgtimeGravityAccMagmean | Numeric |        |               
-avgtimeGravityAccMagstd | Numeric |        |              
-avgtimeBodyAccJerkMagmean | Numeric |        |              
-avgtimeBodyAccJerkMagstd | Numeric |        |              
-avgtimeBodyGyroMagmean | Numeric |        |                 
-avgtimeBodyGyroMagstd | Numeric |        |                 
-avgtimeBodyGyroJerkMagmean | Numeric |        |             
-avgtimeBodyGyroJerkMagstd | Numeric |        |             
-avgfrequencyBodyAccmeanX | Numeric |        |               
-avgfrequencyBodyAccmeanY | Numeric |        |               
-avgfrequencyBodyAccmeanZ | Numeric |        |                
-avgfrequencyBodyAccstdX | Numeric |        |               
-avgfrequencyBodyAccstdY | Numeric |        |                 
-avgfrequencyBodyAccstdZ | Numeric |        |                            
-avgfrequencyBodyAccJerkmeanX | Numeric |        |          
-avgfrequencyBodyAccJerkmeanY | Numeric |        |            
-avgfrequencyBodyAccJerkmeanZ | Numeric |        |           
-avgfrequencyBodyAccJerkstdX | Numeric |        |             
-avgfrequencyBodyAccJerkstdY | Numeric |        |            
-avgfrequencyBodyAccJerkstdZ | Numeric |        |                    
-avgfrequencyBodyGyromeanX | Numeric |        |              
-avgfrequencyBodyGyromeanY | Numeric |        |              
-avgfrequencyBodyGyromeanZ | Numeric |        |               
-avgfrequencyBodyGyrostdX | Numeric |        |              
-avgfrequencyBodyGyrostdY | Numeric |        |                
-avgfrequencyBodyGyrostdZ | Numeric |        |                          
-avgfrequencyBodyAccMagmean | Numeric |        |            
-avgfrequencyBodyAccMagstd | Numeric |        |                     
-avgfrequencyBodyBodyAccJerkMagmean | Numeric |        |      
-avgfrequencyBodyBodyAccJerkMagstd | Numeric |        |       
-avgfrequencyBodyBodyGyroMagmean | Numeric |        |       
-avgfrequencyBodyBodyGyroMagstd | Numeric |        |           
-avgfrequencyBodyBodyGyroJerkMagmean | Numeric |        |    
-avgfrequencyBodyBodyGyroJerkMagstd | Numeric |        | 
+activity | Character | WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING |
+subject | Integer | 1...30 |
+avgTimeBodyAccmeanX | Numeric |        |            
+avgTimeBodyAccmeanY | Numeric |        |
+avgTimeBodyAccmeanZ | Numeric |        |                     
+avgTimeBodyAccstdX  | Numeric |        |                     
+avgTimeBodyAccstdY  | Numeric |        |
+avgTimeBodyAccstdZ  | Numeric |        |
+avgTimeGravityAccmeanX | Numeric |        |                 
+avgTimeGravityAccmeanY | Numeric |        |                
+avgTimeGravityAccmeanZ | Numeric |        |                  
+avgTimeGravityAccstdX | Numeric |        |                 
+avgTimeGravityAccstdY | Numeric |        |
+avgTimeGravityAccstdZ | Numeric |        |                 
+avgTimeBodyAccJerkmeanX | Numeric |        |                
+avgTimeBodyAccJerkmeanY | Numeric |        |                
+avgTimeBodyAccJerkmeanZ | Numeric |        |                 
+avgTimeBodyAccJerkstdX | Numeric |        |                
+avgTimeBodyAccJerkstdY | Numeric |        |                
+avgTimeBodyAccJerkstdZ | Numeric |        |                
+avgTimeBodyGyromeanX | Numeric |        |                   
+avgTimeBodyGyromeanY | Numeric |        |                   
+avgTimeBodyGyromeanZ | Numeric |        |                    
+avgTimeBodyGyrostdX | Numeric |        |                   
+avgTimeBodyGyrostdY | Numeric |        |                     
+avgTimeBodyGyrostdZ | Numeric |        |                   
+avgTimeBodyGyroJerkmeanX | Numeric |        |               
+avgTimeBodyGyroJerkmeanY | Numeric |        |               
+avgTimeBodyGyroJerkmeanZ| Numeric |        |                
+avgTimeBodyGyroJerkstdX | Numeric |        |               
+avgTimeBodyGyroJerkstdY | Numeric |        |                 
+avgTimeBodyGyroJerkstdZ | Numeric |        |                
+avgTimeBodyAccMagmean | Numeric |        |                  
+avgTimeBodyAccMagstd | Numeric |        |                  
+avgTimeGravityAccMagmean | Numeric |        |               
+avgTimeGravityAccMagstd | Numeric |        |              
+avgTimeBodyAccJerkMagmean | Numeric |        |              
+avgTimeBodyAccJerkMagstd | Numeric |        |              
+avgTimeBodyGyroMagmean | Numeric |        |                 
+avgTimeBodyGyroMagstd | Numeric |        |                 
+avgTimeBodyGyroJerkMagmean | Numeric |        |             
+avgTimeBodyGyroJerkMagstd | Numeric |        |             
+avgFrequencyBodyAccmeanX | Numeric |        |               
+avgFrequencyBodyAccmeanY | Numeric |        |               
+avgFrequencyBodyAccmeanZ | Numeric |        |                
+avgFrequencyBodyAccstdX | Numeric |        |               
+avgFrequencyBodyAccstdY | Numeric |        |                 
+avgFrequencyBodyAccstdZ | Numeric |        |                            
+avgFrequencyBodyAccJerkmeanX | Numeric |        |          
+avgFrequencyBodyAccJerkmeanY | Numeric |        |            
+avgFrequencyBodyAccJerkmeanZ | Numeric |        |           
+avgFrequencyBodyAccJerkstdX | Numeric |        |             
+avgFrequencyBodyAccJerkstdY | Numeric |        |            
+avgFrequencyBodyAccJerkstdZ | Numeric |        |                    
+avgFrequencyBodyGyromeanX | Numeric |        |              
+avgFrequencyBodyGyromeanY | Numeric |        |              
+avgFrequencyBodyGyromeanZ | Numeric |        |               
+avgFrequencyBodyGyrostdX | Numeric |        |              
+avgFrequencyBodyGyrostdY | Numeric |        |                
+avgFrequencyBodyGyrostdZ | Numeric |        |                          
+avgFrequencyBodyAccMagmean | Numeric |        |            
+avgFrequencyBodyAccMagstd | Numeric |        |                     
+avgFrequencyBodyBodyAccJerkMagmean | Numeric |        |      
+avgFrequencyBodyBodyAccJerkMagstd | Numeric |        |       
+avgFrequencyBodyBodyGyroMagmean | Numeric |        |       
+avgFrequencyBodyBodyGyroMagstd | Numeric |        |           
+avgFrequencyBodyBodyGyroJerkMagmean | Numeric |        |    
+avgFrequencyBodyBodyGyroJerkMagstd | Numeric |        | 
+
+Each variable in the tidy data set in Table 2, except for the activity and subject variables, is the corresponding average of the variables in the intermediate data set in Table 1.
 
 <!--
 This codebook describes the tidy data set, **tidy\_dataset2**, generated from the initial test and training data set. It also describes each transformation done to clean up the input data set to generate tidy\_dataset2. Lastly, it defines the variables in tidy\_dataset2.
