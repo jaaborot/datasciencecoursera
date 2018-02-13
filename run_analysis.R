@@ -101,12 +101,6 @@ train_dataset_tbl <- train_dataset_tbl[c(dim(train_dataset_tbl)[2], 1:dim(train_
 #### row-bind the train and test data set
 train_test_dataset <- rbind(train_dataset_tbl, test_dataset_tbl)
 
-# 4. Label the dataset1 with descriptive variable names.
-# done in the previous lines
-
-# 5. Create a second tidy dataset, dataset2, from dataset1 with the additional data of average of each variable for each activity and each subject.
-train_test_dataset_gby <- group_by(train_test_dataset, activity, subject)
-
 ######## Step 5 ########
 # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 tidy_dataset <- aggregate(train_test_dataset[, 3:dim(train_test_dataset)[2]], list(train_test_dataset$activity, train_test_dataset$subject), mean)
@@ -117,16 +111,6 @@ names(tidy_dataset)[2] <- 'subject'
 names(tidy_dataset)[3:length(names(tidy_dataset))] <- paste0(toupper(substring(names(tidy_dataset)[3:length(names(tidy_dataset))], 1, 1)), substring(names(tidy_dataset)[3:length(names(tidy_dataset))], 2, nchar(names(tidy_dataset)[3:length(names(tidy_dataset))])))
 names(tidy_dataset)[3:length(names(tidy_dataset))] <- paste0("avg", names(tidy_dataset)[3:length(names(tidy_dataset))])
 
-# compute for the average of each variable
-# for(i in 3:dim(train_test_dataset_gby)[2]){
-#     colname <- paste0("avg", names(train_test_dataset_gby)[i])
-#     train_test_dataset_gby[[colname]] <- mean(train_test_dataset_gby[[i]])
-# }
-
-# create a tidy data set out of the computed average of the mean and standard deviation variables
-# tidy_dataset <- train_test_dataset_gby[, (length(mean_std_cols) + 2 + 1): dim(train_test_dataset_gby)[2]]
-
 # write the tidy data set into file
 write.table(tidy_dataset, file = "tidy_dataset.txt", row.names = FALSE)
 write.table(names(tidy_dataset), file = "names_tidy_dataset.txt")
-
