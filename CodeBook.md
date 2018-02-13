@@ -116,6 +116,7 @@ frequencyBodyBodyGyroJerkMagstd | fBodyBodyGyroJerkMag-std() | Numeric |        
 
 Note that the allowable values for the numeric variables are left blank since no information was provided in the reference input data set. The original activity variable (integer:1...6) values for each observation are listed in the y_test.txt and y_train.txt files while the corresponding allowable labels are extracted from the activity_labels.txt file. The integer values of the activity variable are replaced with their corresponding character labels. The values of the subject variable for each observation are listed in the subjects_test.txt and subjects_train.txt files. The mean and standard measurement variables values for each observation are listed in the X_train.txt and X_test.txt. The name for each of these measurement variables are extracted from the features.txt file. Pre-processing is done on the variable names to make it tidy. This cleaning process is documented in the README.md file in the top level of this repository.
 
+<!--
 This codebook describes the tidy data set, **tidy\_dataset2**, generated from the initial test and training data set. It also describes each transformation done to clean up the input data set to generate tidy\_dataset2. Lastly, it defines the variables in tidy\_dataset2.
 
 
@@ -3596,3 +3597,4 @@ index | variable
 "3426" | "meantotalAccelerationZFeature126"
 "3427" | "meantotalAccelerationZFeature127"
 "3428" | "meantotalAccelerationZFeature128"
+-->
