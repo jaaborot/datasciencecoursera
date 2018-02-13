@@ -53,38 +53,62 @@ The objects ```mean_cols```, ```std_cols```, ```meanFreq_cols```, ```angle_cols`
 ## Loading the test data set
 In order to load the test data set, we need to load the contents of X_test.txt, y_test.txt, and subject_test.txt.
 
+X_test is loaded into a data frame using the ```read.table(.)``` function in the ```utils``` package. Only the relevant columns are loaded into the data frame by limiting the columns of X_test into the variable indices defined in ```mean_std_cols``` list.
+
 ```
-# load the X test data
 X_test <- read.table(file = "./projectdata/test/X_test.txt")
 X_test <- X_test[, sort(mean_std_cols)]
 X_test_tbl <- tbl_df(X_test)
+```
 
-# replace the variables in X_test with the list of features defined in features.txt
+The variable names in X\_test data frame are replaced with the tidy variable names from the ```features``` list.
+
+```
 names(X_test_tbl) <- features$V2[sort(sort(mean_std_cols))]
+```
 
-# load y test data
+Likewise, y\_test is loaded into a data frame using the ```read.table(.)``` function. We also rename the variable name in y\_test into "activity" since the values in y\_test correspond to the activity labels for each observation in X\_test.
+
+```
 y_test <- read.table(file = "./projectdata/test/y_test.txt") 
 y_test_tbl <- tbl_df(y_test)
-# rename the variables of y_test
 y_test_tbl <- rename(y_test_tbl, activity = V1)
+```
 
-# replace numerical indices of activities with activity names
+We replace the activity indices in y\_test with their corresponding activity labels (WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING) from the ```activities``` object defined in the first steps.
+
+```
 y_test_tbl$activity <- sapply(y_test_tbl$activity, function(x){ as.character(activities$V2[match(x, activities$V1)] ) })
+```
 
-# append dependent variable column into the end of the
-# independent variables to create a merged data set dataset1 
+We then combine y\_test with X\_test to attach to the observations in X\_test their corresponding activity labels in y\_test. We implement this using the ```mutate(.)``` function in the ```dplyr``` package.
+
+```
 yX_test_tbl <- mutate(X_test_tbl, activity = y_test_tbl$activity) 
-# move the dependent variable column into the first column of the dataset1 
+```
+
+We move the column for the activity variable into the first column of the combined test data set ```yX\_test```.
+
+```
 yX_test_tbl <- yX_test_tbl[c(dim(yX_test_tbl)[2], 1:dim(yX_test_tbl)[2]-1)]
+```
 
-# load subject_test data set
+We also load the corresponding subject data into each observation in ```yX_test_tbl``` from the subjects\_test.txt file.
+
+```
 subject_test <- read.table(file = "./projectdata/test/subject_test.txt")
+```
 
-# append the subject data column to the last column of yX_test_tbl 
+Lastly, we attach the subject data into ```yX_test_tbl``` data frame to complete the whole test data set which we denote as ```test_dataset_tbl```.
+
+```
 test_dataset <- mutate(yX_test_tbl, subject = subject_test$V1)
 test_dataset_tbl <- tbl_df(test_dataset)
+```
 
-# move the subject data column to the first column of dataset1 
+We also move the column for the subject variable into the first column of ```test_dataset_tbl```.
+
+```
 test_dataset_tbl <- test_dataset_tbl[c(dim(test_dataset_tbl)[2], 1:dim(test_dataset_tbl)[2]-1)]
 ```
 
