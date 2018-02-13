@@ -1,9 +1,46 @@
 # Data Set Code Book: Average of Mean and Standard Deviation of Measurements
 
-Codebook prepared by Jeffrey A. Aborot, based on the [data set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) provided in UCI Machine Learning Repository in the project [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+Codebook prepared by Jeffrey A. Aborot, based on the [data set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) provided in the UCI Machine Learning Repository in the project [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). 
 
-The input data set contains the following files:
-* 
+The input data set was generated from the experiments conducted by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio and Luca Oneto of the [Smartlab - Non Linear Complex Systems Laboratory](http://www.smartlab.ws). The experiments were  carried out with a group of 30 participants with age in the range of 19 to 48 years old. Each participant were fitted with sa Samsung Galazy S II on the waist and performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, and laying).
+
+
+
+The input data set is composed of 10299 observations.
+
+The input data set is composed of the following files:
+* README.txt
+* activity_labels.txt
+* features.txt
+* features_info.txt
+* \test
+    * X_test.txt
+    * y_test.txt
+    * subject_test.txt
+    * \Inertial Signals
+        * body_acc_x_test.txt
+        * body_acc_y_test.txt
+        * body_acc_z_test.txt
+        * body_gyro_x_test.txt
+        * body_gyro_y_test.txt
+        * body_gyro_z_test.txt
+        * total_acc_x_test.txt
+        * total_acc_y_test.txt
+        * total_acc_z_test.txt
+* \train
+    * X_train.txt
+    * y_train.txt
+    * subject_train.txt
+    * \Inertial Signals
+        * body_acc_x_train.txt
+        * body_acc_y_train.txt
+        * body_acc_z_train.txt
+        * body_gyro_x_train.txt
+        * body_gyro_y_train.txt
+        * body_gyro_z_train.txt
+        * total_acc_x_train.txt
+        * total_acc_y_train.txt
+        * total_acc_z_train.txt
 
 This codebook describes the tidy data set, **tidy\_dataset2**, generated from the initial test and training data set. It also describes each transformation done to clean up the input data set to generate tidy\_dataset2. Lastly, it defines the variables in tidy\_dataset2.
 
