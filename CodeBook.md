@@ -69,68 +69,68 @@ timeBodyGyromeanZ | tBodyGyro-mean()-Z | Numeric |        |
 timeBodyGyrostdX | tBodyGyro-std()-X | Numeric |        |                   
 timeBodyGyrostdY | tBodyGyro-std()-Y | Numeric |        |                     
 timeBodyGyrostdZ | tBodyGyro-std()-Z | Numeric |        |                   
-* timeBodyGyroJerkmeanX                
-* timeBodyGyroJerkmeanY               
-* timeBodyGyroJerkmeanZ                
-* timeBodyGyroJerkstdX                
-* timeBodyGyroJerkstdY                 
-* timeBodyGyroJerkstdZ                
-* timeBodyAccMagmean                   
-* timeBodyAccMagstd                   
-* timeGravityAccMagmean                
-* timeGravityAccMagstd                
-* timeBodyAccJerkMagmean               
-* timeBodyAccJerkMagstd               
-* timeBodyGyroMagmean                  
-* timeBodyGyroMagstd                  
-* timeBodyGyroJerkMagmean              
-* timeBodyGyroJerkMagstd              
-* frequencyBodyAccmeanX                
-* frequencyBodyAccmeanY               
-* frequencyBodyAccmeanZ                
-* frequencyBodyAccstdX                
-* frequencyBodyAccstdY                 
-* frequencyBodyAccstdZ                
-* frequencyBodyAccmeanFreqX            
-* frequencyBodyAccmeanFreqY           
-* frequencyBodyAccmeanFreqZ            
-* frequencyBodyAccJerkmeanX           
-* frequencyBodyAccJerkmeanY            
-* frequencyBodyAccJerkmeanZ           
-* frequencyBodyAccJerkstdX             
-* frequencyBodyAccJerkstdY            
-* frequencyBodyAccJerkstdZ             
-* frequencyBodyAccJerkmeanFreqX       
-* frequencyBodyAccJerkmeanFreqY        
-* frequencyBodyAccJerkmeanFreqZ       
-* frequencyBodyGyromeanX               
-* frequencyBodyGyromeanY              
-* frequencyBodyGyromeanZ               
-* frequencyBodyGyrostdX               
-* frequencyBodyGyrostdY                
-* frequencyBodyGyrostdZ               
-* frequencyBodyGyromeanFreqX           
-* frequencyBodyGyromeanFreqY          
-* frequencyBodyGyromeanFreqZ           
-* frequencyBodyAccMagmean             
-* frequencyBodyAccMagstd               
-* frequencyBodyAccMagmeanFreq         
-* frequencyBodyBodyAccJerkMagmean      
-* frequencyBodyBodyAccJerkMagstd      
-* frequencyBodyBodyAccJerkMagmeanFreq  
-* frequencyBodyBodyGyroMagmean        
-* frequencyBodyBodyGyroMagstd          
-* frequencyBodyBodyGyroMagmeanFreq    
-* frequencyBodyBodyGyroJerkMagmean     
-* frequencyBodyBodyGyroJerkMagstd     
-* frequencyBodyBodyGyroJerkMagmeanFreq 
-* angletBodyAccMeangravity            
-* angletBodyAccJerkMeangravityMean     
-* angletBodyGyroMeangravityMean\\      
-* angletBodyGyroJerkMeangravityMean    
-* angleXgravityMean                   
-* angleYgravityMean                    
-* angleZgravityMean
+timeBodyGyroJerkmeanX | tBodyGyroJerk-mean()-X | Numeric |        |               
+timeBodyGyroJerkmeanY | tBodyGyroJerk-mean()-Y | Numeric |        |               
+timeBodyGyroJerkmeanZ| tBodyGyroJerk-mean()-Z | Numeric |        |                
+timeBodyGyroJerkstdX | tBodyGyroJerk-std()-X | Numeric |        |               
+timeBodyGyroJerkstdY | tBodyGyroJerk-std()-Y | Numeric |        |                 
+timeBodyGyroJerkstdZ | tBodyGyroJerk-std()-Z | Numeric |        |                
+timeBodyAccMagmean | tBodyAccMag-mean() | Numeric |        |                  
+timeBodyAccMagstd | tBodyAccMag-std() | Numeric |        |                  
+timeGravityAccMagmean | tGravityAccMag-mean() | Numeric |        |               
+timeGravityAccMagstd | tGravityAccMag-std() | Numeric |        |              
+timeBodyAccJerkMagmean | tBodyAccJerkMag-mean() | Numeric |        |              
+timeBodyAccJerkMagstd | tBodyAccJerkMag-std() | Numeric |        |              
+timeBodyGyroMagmean | tBodyGyroMag-mean() | Numeric |        |                 
+timeBodyGyroMagstd | tBodyGyroMag-std() | Numeric |        |                 
+timeBodyGyroJerkMagmean | tBodyGyroJerkMag-mean() | Numeric |        |             
+timeBodyGyroJerkMagstd | tBodyGyroJerkMag-std() | Numeric |        |             
+frequencyBodyAccmeanX | fBodyAcc-mean()-X | Numeric |        |               
+frequencyBodyAccmeanY | fBodyAcc-mean()-Y | Numeric |        |               
+frequencyBodyAccmeanZ | fBodyAcc-mean()-Z | Numeric |        |                
+frequencyBodyAccstdX | fBodyAcc-std()-X | Numeric |        |               
+frequencyBodyAccstdY | fBodyAcc-std()-Y | Numeric |        |                 
+frequencyBodyAccstdZ | fBodyAcc-std()-Z | Numeric |        |                
+frequencyBodyAccmeanFreqX | fBodyAcc-meanFreq()-X | Numeric |        |           
+frequencyBodyAccmeanFreqY | fBodyAcc-meanFreq()-Y | Numeric |        |           
+frequencyBodyAccmeanFreqZ | fBodyAcc-meanFreq()-Z | Numeric |        |            
+frequencyBodyAccJerkmeanX | fBodyAccJerk-mean()-X | Numeric |        |          
+frequencyBodyAccJerkmeanY | fBodyAccJerk-mean()-Y | Numeric |        |            
+frequencyBodyAccJerkmeanZ | fBodyAccJerk-mean()-Z | Numeric |        |           
+frequencyBodyAccJerkstdX | fBodyAccJerk-std()-X | Numeric |        |             
+frequencyBodyAccJerkstdY | fBodyAccJerk-std()-Y | Numeric |        |            
+frequencyBodyAccJerkstdZ | fBodyAccJerk-std()-Z | Numeric |        |             
+frequencyBodyAccJerkmeanFreqX | fBodyAccJerk-meanFreq()-X | Numeric |        |      
+frequencyBodyAccJerkmeanFreqY | fBodyAccJerk-meanFreq()-Y | Numeric |        |        
+frequencyBodyAccJerkmeanFreqZ | fBodyAccJerk-meanFreq()-Z | Numeric |        |       
+frequencyBodyGyromeanX | fBodyGyro-mean()-X | Numeric |        |              
+frequencyBodyGyromeanY | fBodyGyro-mean()-Y | Numeric |        |              
+frequencyBodyGyromeanZ | fBodyGyro-mean()-Z | Numeric |        |               
+frequencyBodyGyrostdX | fBodyGyro-std()-X | Numeric |        |              
+frequencyBodyGyrostdY | fBodyGyro-std()-Y | Numeric |        |                
+frequencyBodyGyrostdZ | fBodyGyro-std()-Z | Numeric |        |               
+frequencyBodyGyromeanFreqX | fBodyGyro-meanFreq()-X | Numeric |        |          
+frequencyBodyGyromeanFreqY | fBodyGyro-meanFreq()-Y | Numeric |        |          
+frequencyBodyGyromeanFreqZ | fBodyGyro-meanFreq()-Z | Numeric |        |           
+frequencyBodyAccMagmean | fBodyAccMag-mean() | Numeric |        |            
+frequencyBodyAccMagstd | fBodyAccMag-std() | Numeric |        |              
+frequencyBodyAccMagmeanFreq | fBodyAccMag-meanFreq() | Numeric |        |       
+frequencyBodyBodyAccJerkMagmean | fBodyBodyAccJerkMag-mean() | Numeric |        |      
+frequencyBodyBodyAccJerkMagstd | fBodyBodyAccJerkMag-std() | Numeric |        |     
+frequencyBodyBodyAccJerkMagmeanFreq | fBodyBodyAccJerkMag-meanFreq() | Numeric |        |  
+frequencyBodyBodyGyroMagmean | fBodyBodyGyroMag-mean() | Numeric |        |       
+frequencyBodyBodyGyroMagstd | fBodyBodyGyroMag-std() | Numeric |        |         
+frequencyBodyBodyGyroMagmeanFreq | fBodyBodyGyroMag-meanFreq() | Numeric |        |   
+frequencyBodyBodyGyroJerkMagmean | fBodyBodyGyroJerkMag-mean() | Numeric |        |    
+frequencyBodyBodyGyroJerkMagstd | fBodyBodyGyroJerkMag-std() | Numeric |        |    
+frequencyBodyBodyGyroJerkMagmeanFreq | fBodyBodyGyroJerkMag-meanFreq() | Numeric |        | 
+angletBodyAccMeangravity | angle(tBodyAccMean,gravity) | Numeric |        |           
+angletBodyAccJerkMeangravityMean | angle(tBodyAccJerkMean),gravityMean) | Numeric |        |    
+angletBodyGyroMeangravityMean | angle(tBodyGyroMean,gravityMean) | Numeric |        |     
+angletBodyGyroJerkMeangravityMean | angle(tBodyGyroJerkMean,gravityMean) | Numeric |        |   
+angleXgravityMean | angle(X,gravityMean) | Numeric |        |                  
+angleYgravityMean | angle(Y,gravityMean) | Numeric |        |                    
+angleZgravityMean | angle(Z,gravityMean) | Numeric |        |
 
 This codebook describes the tidy data set, **tidy\_dataset2**, generated from the initial test and training data set. It also describes each transformation done to clean up the input data set to generate tidy\_dataset2. Lastly, it defines the variables in tidy\_dataset2.
 
