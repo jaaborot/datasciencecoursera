@@ -1,6 +1,6 @@
 # Data Set Code Book: Average of Mean and Standard Deviation of Measurements
 
-Codebook prepared by Jeffrey A. Aborot, based on the [data set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) provided in the UCI Machine Learning Repository in the project [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). 
+Codebook prepared by Jeffrey A. Aborot, based on the [data set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) provided in the UCI Machine Learning Repository in the project [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). For any questions and clarifications regarding this codebook, you may send an email to [jaaborot@up.edu.ph](jaaborot@up.edu.ph).
 
 ## Data Collection Process
 The input data set was collected using the ```download.file(.)``` function in the R ```utils``` package and saved locally to disk.
