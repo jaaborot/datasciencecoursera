@@ -140,8 +140,16 @@ train_dataset_tbl <- tbl_df(train_dataset)
 train_dataset_tbl <- train_dataset_tbl[c(dim(train_dataset_tbl)[2], 1:dim(train_dataset_tbl)[2]-1)]
 ```
 
-<!--
+## Combining the training and test data set
+
+To construct the intermediate data set, we combine the rows of the training data set and the test data set. We do so by using the ```rbind(.)``` function from the base R package with the train\_dataset\_tbl and test\_dataset\_tbl data frames as input. The resulting data frame is assigned to a new data frame train\_test\_dataset.
+
+```
 train_test_dataset <- rbind(train_dataset_tbl, test_dataset_tbl)
+```
+
+<!--
+
 ########## construct the test data set out of X_test, y_test, activity and subject ##########
 
 
