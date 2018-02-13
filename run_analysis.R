@@ -110,6 +110,8 @@ train_test_dataset_gby <- group_by(train_test_dataset, activity, subject)
 ######## Step 5 ########
 # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 tidy_dataset <- aggregate(train_test_dataset[, 3:dim(train_test_dataset)[2]], list(train_test_dataset$activity, train_test_dataset$subject), mean)
+
+# tidy the name of each variable
 names(tidy_dataset)[1] <- 'activity'
 names(tidy_dataset)[2] <- 'subject'
 names(tidy_dataset)[3:length(names(tidy_dataset))] <- paste0(toupper(substring(names(tidy_dataset)[3:length(names(tidy_dataset))], 1, 1)), substring(names(tidy_dataset)[3:length(names(tidy_dataset))], 2, nchar(names(tidy_dataset)[3:length(names(tidy_dataset))])))
