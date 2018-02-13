@@ -129,7 +129,7 @@ frequencyBodyBodyGyroMagstd | fBodyBodyGyroMag-std() | Numeric |        |
 frequencyBodyBodyGyroJerkMagmean | fBodyBodyGyroJerkMag-mean() | Numeric |        |    
 frequencyBodyBodyGyroJerkMagstd | fBodyBodyGyroJerkMag-std() | Numeric |        |    
 
-Note that the allowable values for the numeric variables are left blank since no information was provided in the reference input data set. The original activity variable (integer:1...6) values for each observation are listed in the y_test.txt and y_train.txt files while the corresponding allowable labels are extracted from the activity_labels.txt file. The integer values of the activity variable are replaced with their corresponding character labels. The values of the subject variable for each observation are listed in the subjects_test.txt and subjects_train.txt files. The mean and standard measurement variables values for each observation are listed in the X_train.txt and X_test.txt. The name for each of these measurement variables are extracted from the features.txt file. Pre-processing is done on the variable names to make it tidy. This cleaning process is documented in the README.md file in the top level of this repository.
+Note that the allowable values for the numeric variables are left blank since no information was provided in the reference input data set. The original activity variable (integer:1...6) values for each observation are listed in the y_test.txt and y_train.txt files while the corresponding allowable labels are extracted from the activity_labels.txt file. The integer values of the activity variable are replaced with their corresponding character labels. The values of the subject variable for each observation are listed in the subjects_test.txt and subjects_train.txt files. The mean and standard measurement variables values for each observation are listed in the X_train.txt and X_test.txt. The name for each of these measurement variables are extracted from the features.txt file. Pre-processing is done on the variable names to make it tidy. This cleaning process is documented in the README.md file in the top level of this repository. Note that no variables from the Inertial Signals input data set were included in the intermediate data set since no mean and standard deviation measurements were calculated for this input data set.
 
 ## Tidy Data Set
 
@@ -209,6 +209,10 @@ avgFrequencyBodyBodyGyroJerkMagmean | Numeric |        |
 avgFrequencyBodyBodyGyroJerkMagstd | Numeric |        | 
 
 Each variable in the tidy data set in Table 2, except for the activity and subject variables, is the corresponding average of the variables in the intermediate data set in Table 1.
+
+### Tidy Data Set Dimensions
+
+The generated tidy data set has 180 rows and 68 columns. The last 66 columns correspond to the average value variables defined in Table 2. The rows of the data set correspond to the average values of the last 66 variables defined in Table 2 with respect to the activity and subject variables. The generated tidy data set is written into a file **tidy_dataset.txt** available at the top level directory of this repository.
 
 ## Handling Missing Values
 
