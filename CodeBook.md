@@ -1,4 +1,9 @@
-# CodeBook
+# Data Set Code Book: Average of Mean and Standard Deviation of Measurements
+
+Codebook prepared by Jeffrey A. Aborot, based on the [data set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) provided in UCI Machine Learning Repository in the project [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+
+The input data set contains the following files:
+* 
 
 This codebook describes the tidy data set, **tidy\_dataset2**, generated from the initial test and training data set. It also describes each transformation done to clean up the input data set to generate tidy\_dataset2. Lastly, it defines the variables in tidy\_dataset2.
 
