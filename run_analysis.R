@@ -15,6 +15,9 @@ features$V2 <- as.character(features$V2)
 # columns for mean and standard deviation of measurements
 mean_cols <- grep("[Mm]ean", features$V2)
 std_cols <- grep("[Ss]td", features$V2)
+meanFreq_cols <- grep("meanFreq", features$V2)
+angle_cols <- grep("angle", features$V2)
+mean_std_cols <- setdiff(sort(c(mean_cols, std_cols)), c(angle_cols, meanFreq_cols))
 
 features$V2 <- gsub("\\(","", features$V2)
 features$V2 <- gsub("\\)","", features$V2)
@@ -30,11 +33,11 @@ activities <- read.table(file = "./projectdata/activity_labels.txt")
 
 # load the X test data
 X_test <- read.table(file = "./projectdata/test/X_test.txt")
-X_test <- X_test[, sort(c(mean_cols, std_cols))]
+X_test <- X_test[, sort(mean_std_cols)]
 X_test_tbl <- tbl_df(X_test)
 
 # replace the variables in X_test with the list of features defined in features.txt
-names(X_test_tbl) <- features$V2[sort(c(mean_cols, std_cols))]
+names(X_test_tbl) <- features$V2[sort(sort(mean_std_cols))]
 
 # load y test data
 y_test <- read.table(file = "./projectdata/test/y_test.txt") 
@@ -64,11 +67,11 @@ test_dataset_tbl <- test_dataset_tbl[c(dim(test_dataset_tbl)[2], 1:dim(test_data
 ########## construct the train data set out of X_train, y_train, activity and subjects ##########
 # load the X test data
 X_train <- read.table(file = "./projectdata/train/X_train.txt")
-X_train <- X_train[, c(mean_cols, std_cols)]
+X_train <- X_train[, mean_std_cols]
 X_train_tbl <- tbl_df(X_train)
 
 # replace the variables in X_train with the list of features defined in features.txt
-names(X_train_tbl) <- features$V2[sort(c(mean_cols, std_cols))]
+names(X_train_tbl) <- features$V2[sort(mean_std_cols)]
 
 # load y train data set
 y_train <- read.table(file = "./projectdata/train/y_train.txt") 
