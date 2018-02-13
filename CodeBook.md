@@ -41,7 +41,9 @@ The input data set is composed of 10299 observations. Each observation is compos
 
 Further details about the generation of the input data set is available at the Human Activity Recognition Using Smartphones Data Set project website.
 
-As per instructed in this course project, we only consider the mean and standard variation measurement on the variables provided in the input data set. The following variables in the table below are those only considered from the input data set in generating the required tidy data set. These measurement variables form a subset of the variable names defined in the features.txt file. The activity variable is taken from the activity_labels.txt file and the subject variable is taken from the subject_test.txt subject_train.txt files. The rightmost column is a tidy version of the raw variable names.
+As per instructed in this course project, we only consider the mean and standard variation measurement on the variables provided in the input data set. The following variables in Table 1 are those only considered from the input data set in generating the required tidy data set. These measurement variables form a subset of the variable names defined in the features.txt file. The activity variable is taken from the activity_labels.txt file and the subject variable is taken from the subject_test.txt subject_train.txt files. The rightmost column is a tidy version of the raw variable names.
+
+### Table 1: Mean and Standard Measurement Variables from the Input Data Set
 
 Tidy Name | Original Variable Name | Variable Type | Allowable Values |
 ----------|----------|---------------|------------------|
@@ -115,6 +117,79 @@ frequencyBodyBodyGyroJerkMagmean | fBodyBodyGyroJerkMag-mean() | Numeric |      
 frequencyBodyBodyGyroJerkMagstd | fBodyBodyGyroJerkMag-std() | Numeric |        |    
 
 Note that the allowable values for the numeric variables are left blank since no information was provided in the reference input data set. The original activity variable (integer:1...6) values for each observation are listed in the y_test.txt and y_train.txt files while the corresponding allowable labels are extracted from the activity_labels.txt file. The integer values of the activity variable are replaced with their corresponding character labels. The values of the subject variable for each observation are listed in the subjects_test.txt and subjects_train.txt files. The mean and standard measurement variables values for each observation are listed in the X_train.txt and X_test.txt. The name for each of these measurement variables are extracted from the features.txt file. Pre-processing is done on the variable names to make it tidy. This cleaning process is documented in the README.md file in the top level of this repository.
+
+The variables in Table 1 form an intermediary data set for generating the final required tidy data set. The tidy data set is composed of the variables defined in Table 2.
+
+## Table 2: Tidy Data Set
+
+Variable Name | Variable Type | Allowable Values |
+--------------|---------------|------------------|
+avgtimeBodyAccmeanX | Numeric |        |            
+avgtimeBodyAccmeanY | Numeric |        |
+avgtimeBodyAccmeanZ | Numeric |        |                     
+avgtimeBodyAccstdX  | Numeric |        |                     
+avgtimeBodyAccstdY  | Numeric |        |
+avgtimeBodyAccstdZ  | Numeric |        |
+avgtimeGravityAccmeanX | Numeric |        |                 
+avgtimeGravityAccmeanY | Numeric |        |                
+avgtimeGravityAccmeanZ | Numeric |        |                  
+avgtimeGravityAccstdX | Numeric |        |                 
+avgtimeGravityAccstdY | Numeric |        |
+avgtimeGravityAccstdZ | Numeric |        |                 
+avgtimeBodyAccJerkmeanX | Numeric |        |                
+avgtimeBodyAccJerkmeanY | Numeric |        |                
+avgtimeBodyAccJerkmeanZ | Numeric |        |                 
+avgtimeBodyAccJerkstdX | Numeric |        |                
+avgtimeBodyAccJerkstdY | Numeric |        |                
+avgtimeBodyAccJerkstdZ | Numeric |        |                
+avgtimeBodyGyromeanX | Numeric |        |                   
+avgtimeBodyGyromeanY | Numeric |        |                   
+avgtimeBodyGyromeanZ | Numeric |        |                    
+avgtimeBodyGyrostdX | Numeric |        |                   
+avgtimeBodyGyrostdY | Numeric |        |                     
+avgtimeBodyGyrostdZ | Numeric |        |                   
+avgtimeBodyGyroJerkmeanX | Numeric |        |               
+avgtimeBodyGyroJerkmeanY | Numeric |        |               
+avgtimeBodyGyroJerkmeanZ| Numeric |        |                
+avgtimeBodyGyroJerkstdX | Numeric |        |               
+avgtimeBodyGyroJerkstdY | Numeric |        |                 
+avgtimeBodyGyroJerkstdZ | Numeric |        |                
+avgtimeBodyAccMagmean | Numeric |        |                  
+avgtimeBodyAccMagstd | Numeric |        |                  
+avgtimeGravityAccMagmean | Numeric |        |               
+avgtimeGravityAccMagstd | Numeric |        |              
+avgtimeBodyAccJerkMagmean | Numeric |        |              
+avgtimeBodyAccJerkMagstd | Numeric |        |              
+avgtimeBodyGyroMagmean | Numeric |        |                 
+avgtimeBodyGyroMagstd | Numeric |        |                 
+avgtimeBodyGyroJerkMagmean | Numeric |        |             
+avgtimeBodyGyroJerkMagstd | Numeric |        |             
+avgfrequencyBodyAccmeanX | Numeric |        |               
+avgfrequencyBodyAccmeanY | Numeric |        |               
+avgfrequencyBodyAccmeanZ | Numeric |        |                
+avgfrequencyBodyAccstdX | Numeric |        |               
+avgfrequencyBodyAccstdY | Numeric |        |                 
+avgfrequencyBodyAccstdZ | Numeric |        |                            
+avgfrequencyBodyAccJerkmeanX | Numeric |        |          
+avgfrequencyBodyAccJerkmeanY | Numeric |        |            
+avgfrequencyBodyAccJerkmeanZ | Numeric |        |           
+avgfrequencyBodyAccJerkstdX | Numeric |        |             
+avgfrequencyBodyAccJerkstdY | Numeric |        |            
+avgfrequencyBodyAccJerkstdZ | Numeric |        |                    
+avgfrequencyBodyGyromeanX | Numeric |        |              
+avgfrequencyBodyGyromeanY | Numeric |        |              
+avgfrequencyBodyGyromeanZ | Numeric |        |               
+avgfrequencyBodyGyrostdX | Numeric |        |              
+avgfrequencyBodyGyrostdY | Numeric |        |                
+avgfrequencyBodyGyrostdZ | Numeric |        |                          
+avgfrequencyBodyAccMagmean | Numeric |        |            
+avgfrequencyBodyAccMagstd | Numeric |        |                     
+avgfrequencyBodyBodyAccJerkMagmean | Numeric |        |      
+avgfrequencyBodyBodyAccJerkMagstd | Numeric |        |       
+avgfrequencyBodyBodyGyroMagmean | Numeric |        |       
+avgfrequencyBodyBodyGyroMagstd | Numeric |        |           
+avgfrequencyBodyBodyGyroJerkMagmean | Numeric |        |    
+avgfrequencyBodyBodyGyroJerkMagstd | Numeric |        | 
 
 <!--
 This codebook describes the tidy data set, **tidy\_dataset2**, generated from the initial test and training data set. It also describes each transformation done to clean up the input data set to generate tidy\_dataset2. Lastly, it defines the variables in tidy\_dataset2.
