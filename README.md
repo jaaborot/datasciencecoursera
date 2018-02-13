@@ -112,47 +112,41 @@ We also move the column for the subject variable into the first column of ```tes
 test_dataset_tbl <- test_dataset_tbl[c(dim(test_dataset_tbl)[2], 1:dim(test_dataset_tbl)[2]-1)]
 ```
 
-<!--
+## Loading the training data set
 
-########## construct the test data set out of X_test, y_test, activity and subject ##########
+For the training data set, we exactly do the same with what we did with the test data set. In this case, we load the data from the X\_train.txt, y\_train.txt and subject\_train.txt files.
 
-
-########## construct the train data set out of X_train, y_train, activity and subjects ##########
-# load the X test data
+```
 X_train <- read.table(file = "./projectdata/train/X_train.txt")
 X_train <- X_train[, mean_std_cols]
 X_train_tbl <- tbl_df(X_train)
 
-# replace the variables in X_train with the list of features defined in features.txt
 names(X_train_tbl) <- features$V2[sort(mean_std_cols)]
 
-# load y train data set
 y_train <- read.table(file = "./projectdata/train/y_train.txt") 
 y_train_tbl <- tbl_df(y_train)
-# rename the variables of y_test
 y_train_tbl <- rename(y_train_tbl, activity = V1)
 
-# replace numerical indices of activities with activity names
 y_train_tbl$activity <- sapply(y_train_tbl$activity, function(x){ as.character(activities$V2[match(x, activities$V1)] ) })
 
-# append dependent variable column into the end of the
-# independent variables to create a merged data set dataset1 
 yX_train_tbl <- mutate(X_train_tbl, activity = y_train_tbl$activity) 
-# move the dependent variable column into the first column of the dataset1 
 yX_train_tbl <- yX_train_tbl[c(dim(yX_train_tbl)[2], 1:dim(yX_train_tbl)[2]-1)]
 
-# load subject_test data set
 subject_train <- read.table(file = "./projectdata/train/subject_train.txt")
 
-# append the subject data column to the last column of yX_test_tbl 
 train_dataset <- mutate(yX_train_tbl, subject = subject_train$V1)
 train_dataset_tbl <- tbl_df(train_dataset)
 
-# move the subject data column to the first column of dataset1 
 train_dataset_tbl <- train_dataset_tbl[c(dim(train_dataset_tbl)[2], 1:dim(train_dataset_tbl)[2]-1)]
+```
 
-#### row-bind the train and test data set
+<!--
 train_test_dataset <- rbind(train_dataset_tbl, test_dataset_tbl)
+########## construct the test data set out of X_test, y_test, activity and subject ##########
+
+
+########## construct the train data set out of X_train, y_train, activity and subjects ##########
+
 
 # 4. Label the dataset1 with descriptive variable names.
 # done in the previous lines
