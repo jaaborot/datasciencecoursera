@@ -41,7 +41,7 @@ The input data set is composed of 10299 observations. Each observation is compos
 
 Further details about the generation of the input data set is available at the Human Activity Recognition Using Smartphones Data Set project website.
 
-As per instructed in this course project, we only consider the mean and standard variation measurement on the variables provided in the input data set. The following variables with original names are those only considered from the in the input data set in generating the required tidy data set:
+As per instructed in this course project, we only consider the mean and standard variation measurement on the variables provided in the input data set. The following variables in the table below are those only considered from the input data set in generating the required tidy data set. These measurement variables form a subset of the variable names defined in the features.txt file. The activity variable is taken from the activity_labels.txt file and the subject variable is taken from the subject_test.txt subject_train.txt files. The rightmost column is a tidy version of the raw variable names.
 
 Tidy Name | Original Variable Name | Variable Type | Allowable Values |
 ----------|----------|---------------|------------------|
