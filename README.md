@@ -23,7 +23,7 @@ features <- read.table(file = "./projectdata/features.txt")
 features$V2 <- as.character(features$V2)
 ```
 
-We then convert the variable names into a cleaner format.
+We then convert the variable names into a cleaner format. The characters '(', ')', ',', and '-' are removed from the variable names. The starting characters 't' and 'f' are replaced with the literals ```time``` and ```frequency``` for readability. 
 
 ```r
 features$V2 <- gsub("\\(","", features$V2)
@@ -51,6 +51,8 @@ meanFreq_cols <- grep("meanFreq", features$V2)
 angle_cols <- grep("angle", features$V2)
 mean_std_cols <- setdiff(sort(c(mean_cols, std_cols)), c(angle_cols, meanFreq_cols))
 ```
+
+The resulting relevant variables are defined in the [codebook](https://github.com/jaaborot/datasciencecoursera/blob/master/CodeBook.md) for this course project accessible in the top level directory of this repository.
 
 The objects ```mean_cols```, ```std_cols```, ```meanFreq_cols```, ```angle_cols```, and ```mean_std_cols``` are all list of indices of variable names. ```mean_cols``` is a list of all variable names which have an occurrence of the pattern ```[Mm]ean```. ```std_cols``` is a list of all variable names which have an occurrence of the pattern ```[Ss]td```. ```meanFreq_cols``` is a list of variable names corresponding to the computed mean frequency value while ```angle_cols``` is a list of variable names which have an occurrence of the pattern ```angle```. The list of indices of variable names which are only relevant to the goal in the course project is computed using the set difference between ```mean_cols``` union ```std_cols``` and ```meanFreq_cols``` union ```angle_cols```. This list is computed using the ```setdiff(.)``` function in R and is assigned to the ```mean_std_cols``` object.
 
@@ -177,3 +179,8 @@ Lastly, ```tidy_dataset``` is written into a file using the ```write.table(.)```
 write.table(tidy_dataset, file = "tidy_dataset.txt", row.names = FALSE)
 write.table(names(tidy_dataset), file = "names_tidy_dataset.txt")
 ```
+
+## Result
+
+The resulting file ```tidy_dataset.txt``` has dimension of  180 rows and 68 columns. It has a file size of 219.2 kilobytes.
+
