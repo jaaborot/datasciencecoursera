@@ -184,5 +184,5 @@ write.table(names(tidy_dataset), file = "names_tidy_dataset.txt")
 
 ## Result
 
-The resulting file ```tidy_dataset.txt``` has dimension of  180 rows and 68 columns. It has a file size of 219.2 kilobytes.
+The resulting file ```tidy_dataset.txt``` has dimension of  180 rows and 68 columns. It has a file size of ~224 kilobytes on disk.
 
