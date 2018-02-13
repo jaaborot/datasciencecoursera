@@ -4,11 +4,8 @@ Codebook prepared by Jeffrey A. Aborot, based on the [data set](https://d396qusz
 
 The input data set was generated from the experiments conducted by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio and Luca Oneto of the [Smartlab - Non Linear Complex Systems Laboratory](http://www.smartlab.ws). The experiments were  carried out with a group of 30 participants with age in the range of 19 to 48 years old. Each participant were fitted with sa Samsung Galazy S II on the waist and performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, and laying).
 
+The input data set is composed of 10299 observations. Each observation is composed of measurement variables for tri-axial linear acceleration and 3-axial angular velocity captured at a constant rate of 50Hz. The input data set is partitioned into 70% training data and 30% test data. The input data set is composed of the following files:
 
-
-The input data set is composed of 10299 observations.
-
-The input data set is composed of the following files:
 * README.txt
 * activity_labels.txt
 * features.txt
@@ -41,6 +38,97 @@ The input data set is composed of the following files:
         * total_acc_x_train.txt
         * total_acc_y_train.txt
         * total_acc_z_train.txt
+
+Further details about the generation of the input data set is available at the Human Activity Recognition Using Smartphones Data Set project website.
+
+As per instructed in this course project, we only consider the mean and standard variation measurement on the variables provided in the input data set. The following variables in the input data set are the only considered variables in the generating the required tidy data set:
+
+* timeBodyAccmeanX                     
+* timeBodyAccmeanY                    
+* timeBodyAccmeanZ                     
+* timeBodyAccstdX                     
+* timeBodyAccstdY                      
+* timeBodyAccstdZ                     
+* timeGravityAccmeanX                  
+* timeGravityAccmeanY                 
+* timeGravityAccmeanZ                  
+* timeGravityAccstdX                  
+* timeGravityAccstdY                   
+* timeGravityAccstdZ                  
+* timeBodyAccJerkmeanX                 
+* timeBodyAccJerkmeanY                
+* timeBodyAccJerkmeanZ                 
+* timeBodyAccJerkstdX                 
+* timeBodyAccJerkstdY                  
+* timeBodyAccJerkstdZ                 
+* timeBodyGyromeanX                    
+* timeBodyGyromeanY                   
+* timeBodyGyromeanZ                    
+* timeBodyGyrostdX                    
+* timeBodyGyrostdY                     
+* timeBodyGyrostdZ                    
+* timeBodyGyroJerkmeanX                
+* timeBodyGyroJerkmeanY               
+* timeBodyGyroJerkmeanZ                
+* timeBodyGyroJerkstdX                
+* timeBodyGyroJerkstdY                 
+* timeBodyGyroJerkstdZ                
+* timeBodyAccMagmean                   
+* timeBodyAccMagstd                   
+* timeGravityAccMagmean                
+* timeGravityAccMagstd                
+* timeBodyAccJerkMagmean               
+* timeBodyAccJerkMagstd               
+* timeBodyGyroMagmean                  
+* timeBodyGyroMagstd                  
+* timeBodyGyroJerkMagmean              
+* timeBodyGyroJerkMagstd              
+* frequencyBodyAccmeanX                
+* frequencyBodyAccmeanY               
+* frequencyBodyAccmeanZ                
+* frequencyBodyAccstdX                
+* frequencyBodyAccstdY                 
+* frequencyBodyAccstdZ                
+* frequencyBodyAccmeanFreqX            
+* frequencyBodyAccmeanFreqY           
+* frequencyBodyAccmeanFreqZ            
+* frequencyBodyAccJerkmeanX           
+* frequencyBodyAccJerkmeanY            
+* frequencyBodyAccJerkmeanZ           
+* frequencyBodyAccJerkstdX             
+* frequencyBodyAccJerkstdY            
+* frequencyBodyAccJerkstdZ             
+* frequencyBodyAccJerkmeanFreqX       
+* frequencyBodyAccJerkmeanFreqY        
+* frequencyBodyAccJerkmeanFreqZ       
+* frequencyBodyGyromeanX               
+* frequencyBodyGyromeanY              
+* frequencyBodyGyromeanZ               
+* frequencyBodyGyrostdX               
+* frequencyBodyGyrostdY                
+* frequencyBodyGyrostdZ               
+* frequencyBodyGyromeanFreqX           
+* frequencyBodyGyromeanFreqY          
+* frequencyBodyGyromeanFreqZ           
+* frequencyBodyAccMagmean             
+* frequencyBodyAccMagstd               
+* frequencyBodyAccMagmeanFreq         
+* frequencyBodyBodyAccJerkMagmean      
+* frequencyBodyBodyAccJerkMagstd      
+* frequencyBodyBodyAccJerkMagmeanFreq  
+* frequencyBodyBodyGyroMagmean        
+* frequencyBodyBodyGyroMagstd          
+* frequencyBodyBodyGyroMagmeanFreq    
+* frequencyBodyBodyGyroJerkMagmean     
+* frequencyBodyBodyGyroJerkMagstd     
+* frequencyBodyBodyGyroJerkMagmeanFreq 
+* angletBodyAccMeangravity            
+* angletBodyAccJerkMeangravityMean     
+* angletBodyGyroMeangravityMean\\      
+* angletBodyGyroJerkMeangravityMean    
+* angleXgravityMean                   
+* angleYgravityMean                    
+* angleZgravityMean
 
 This codebook describes the tidy data set, **tidy\_dataset2**, generated from the initial test and training data set. It also describes each transformation done to clean up the input data set to generate tidy\_dataset2. Lastly, it defines the variables in tidy\_dataset2.
 
