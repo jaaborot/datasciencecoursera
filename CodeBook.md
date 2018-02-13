@@ -2,6 +2,12 @@
 
 Codebook prepared by Jeffrey A. Aborot, based on the [data set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) provided in the UCI Machine Learning Repository in the project [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). 
 
+## Data Collection Process
+The input data set was collected using the ```download.file(.)``` function in the R ```utils``` package and saved locally to disk.
+
+## Date of Data Collection
+The input data set was collected on February 9, 2018.
+
 ## Input Data Set
 The input data set was generated from the experiments conducted by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio and Luca Oneto of the [Smartlab - Non Linear Complex Systems Laboratory](http://www.smartlab.ws). The experiments were  carried out with a group of 30 participants with age in the range of 19 to 48 years old. Each participant were fitted with sa Samsung Galazy S II on the waist and performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, and laying).
 
@@ -41,6 +47,10 @@ The input data set is composed of 10299 observations. Each observation is compos
         * total_acc_z_train.txt
 
 Further details about the generation of the input data set is available at the Human Activity Recognition Using Smartphones Data Set project website.
+
+## Date of Data Cleaning
+
+The cleaning of the input data set was implemented on February 13, 2018.
 
 ## Intermediate Data Set
 
@@ -199,6 +209,10 @@ avgFrequencyBodyBodyGyroJerkMagmean | Numeric |        |
 avgFrequencyBodyBodyGyroJerkMagstd | Numeric |        | 
 
 Each variable in the tidy data set in Table 2, except for the activity and subject variables, is the corresponding average of the variables in the intermediate data set in Table 1.
+
+## Handling Missing Values
+
+Since there are no missing values in the input data set, there were no procedures for handling missing values applied in the generation of the tidy data set.
 
 <!--
 This codebook describes the tidy data set, **tidy\_dataset2**, generated from the initial test and training data set. It also describes each transformation done to clean up the input data set to generate tidy\_dataset2. Lastly, it defines the variables in tidy\_dataset2.
