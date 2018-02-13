@@ -43,30 +43,32 @@ Further details about the generation of the input data set is available at the H
 
 As per instructed in this course project, we only consider the mean and standard variation measurement on the variables provided in the input data set. The following variables in the input data set are the only considered variables in the generating the required tidy data set:
 
-* timeBodyAccmeanX                     
-* timeBodyAccmeanY                    
-* timeBodyAccmeanZ                     
-* timeBodyAccstdX                     
-* timeBodyAccstdY                      
-* timeBodyAccstdZ                     
-* timeGravityAccmeanX                  
-* timeGravityAccmeanY                 
-* timeGravityAccmeanZ                  
-* timeGravityAccstdX                  
-* timeGravityAccstdY                   
-* timeGravityAccstdZ                  
-* timeBodyAccJerkmeanX                 
-* timeBodyAccJerkmeanY                
-* timeBodyAccJerkmeanZ                 
-* timeBodyAccJerkstdX                 
-* timeBodyAccJerkstdY                  
-* timeBodyAccJerkstdZ                 
-* timeBodyGyromeanX                    
-* timeBodyGyromeanY                   
-* timeBodyGyromeanZ                    
-* timeBodyGyrostdX                    
-* timeBodyGyrostdY                     
-* timeBodyGyrostdZ                    
+Tidy Name | Variable | Variable Type | Allowable Values |
+----------|----------|---------------|------------------|
+timeBodyAccmeanX | tBodyAcc-mean()-X | Numeric |        |            
+timeBodyAccmeanY | tBodyAcc-mean()-Y | Numeric |        |
+timeBodyAccmeanZ | tBodyAcc-mean()-Z | Numeric |        |                     
+timeBodyAccstdX  | tBodyAcc-std()-X  | Numeric |        |                     
+timeBodyAccstdY  | tBodyAcc-std()-Y  | Numeric |        |
+timeBodyAccstdZ  | tBodyAcc-std()-Z  | Numeric |        |
+timeGravityAccmeanX | tGravityAcc-mean()-X | Numeric |        |                 
+timeGravityAccmeanY | tGravityAcc-mean()-Y | Numeric |        |                
+timeGravityAccmeanZ | tGravityAcc-mean()-Z | Numeric |        |                  
+timeGravityAccstdX | tGravityAcc-std()-X | Numeric |        |                 
+timeGravityAccstdY | tGravityAcc-std()-Y | Numeric |        |
+timeGravityAccstdZ | tGravityAcc-std()-Z | Numeric |        |                 
+timeBodyAccJerkmeanX | tBodyAccJerk-mean()-X | Numeric |        |                
+timeBodyAccJerkmeanY | tBodyAccJerk-mean()-Y | Numeric |        |                
+timeBodyAccJerkmeanZ | tBodyAccJerk-mean()-Z | Numeric |        |                 
+timeBodyAccJerkstdX | tBodyAccJerk-std()-X | Numeric |        |                
+timeBodyAccJerkstdY | tBodyAccJerk-std()-Y | Numeric |        |                
+timeBodyAccJerkstdZ | tBodyAccJerk-std()-Z | Numeric |        |                
+timeBodyGyromeanX | tBodyGyro-mean()-X | Numeric |        |                   
+timeBodyGyromeanY | tBodyGyro-mean()-Y | Numeric |        |                   
+timeBodyGyromeanZ | tBodyGyro-mean()-Z | Numeric |        |                    
+timeBodyGyrostdX | tBodyGyro-std()-X | Numeric |        |                   
+timeBodyGyrostdY | tBodyGyro-std()-Y | Numeric |        |                     
+timeBodyGyrostdZ | tBodyGyro-std()-Z | Numeric |        |                   
 * timeBodyGyroJerkmeanX                
 * timeBodyGyroJerkmeanY               
 * timeBodyGyroJerkmeanZ                
