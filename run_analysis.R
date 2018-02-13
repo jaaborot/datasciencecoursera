@@ -112,8 +112,8 @@ train_test_dataset_gby <- group_by(train_test_dataset, activity, subject)
 tidy_dataset <- aggregate(train_test_dataset[, 3:dim(train_test_dataset)[2]], list(train_test_dataset$activity, train_test_dataset$subject), mean)
 names(tidy_dataset)[1] <- 'activity'
 names(tidy_dataset)[2] <- 'subject'
-names(tidy_dataset) <- paste0(toupper(substring(names(tidy_dataset), 1, 1)), substring(names(tidy_dataset), 2, nchar(names(tidy_dataset))))
-names(tidy_dataset) <- paste0("avg", names(tidy_dataset))
+names(tidy_dataset)[3:length(names(tidy_dataset))] <- paste0(toupper(substring(names(tidy_dataset)[3:length(names(tidy_dataset))], 1, 1)), substring(names(tidy_dataset)[3:length(names(tidy_dataset))], 2, nchar(names(tidy_dataset)[3:length(names(tidy_dataset))])))
+names(tidy_dataset)[3:length(names(tidy_dataset))] <- paste0("avg", names(tidy_dataset)[3:length(names(tidy_dataset))])
 
 # compute for the average of each variable
 # for(i in 3:dim(train_test_dataset_gby)[2]){
@@ -127,3 +127,4 @@ names(tidy_dataset) <- paste0("avg", names(tidy_dataset))
 # write the tidy data set into file
 write.table(tidy_dataset, file = "tidy_dataset.txt", row.names = FALSE)
 write.table(names(tidy_dataset), file = "names_tidy_dataset.txt")
+
