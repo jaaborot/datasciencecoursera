@@ -2,6 +2,7 @@
 
 Codebook prepared by Jeffrey A. Aborot, based on the [data set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) provided in the UCI Machine Learning Repository in the project [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). 
 
+## Input Data Set
 The input data set was generated from the experiments conducted by Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio and Luca Oneto of the [Smartlab - Non Linear Complex Systems Laboratory](http://www.smartlab.ws). The experiments were  carried out with a group of 30 participants with age in the range of 19 to 48 years old. Each participant were fitted with sa Samsung Galazy S II on the waist and performed six activities (walking, walking upstairs, walking downstairs, sitting, standing, and laying).
 
 The input data set is composed of 10299 observations. Each observation is composed of measurement variables for tri-axial linear acceleration and 3-axial angular velocity captured at a constant rate of 50Hz. The input data set is partitioned into 70% training data and 30% test data. The input data set is composed of the following files:
@@ -41,9 +42,11 @@ The input data set is composed of 10299 observations. Each observation is compos
 
 Further details about the generation of the input data set is available at the Human Activity Recognition Using Smartphones Data Set project website.
 
+## Intermediate Data Set
+
 As per instructed in this course project, we only consider the mean and standard variation measurement on the variables provided in the input data set. The following variables in Table 1 are those only considered from the input data set in generating the required tidy data set. These measurement variables form a subset of the variable names defined in the features.txt file. The activity variable is taken from the activity_labels.txt file and the subject variable is taken from the subject_test.txt subject_train.txt files. The rightmost column is a tidy version of the raw variable names.
 
-### Table 1: Mean and Standard Measurement Variables from the Input Data Set
+#### Table 1: Mean and Standard Measurement Variables from the Input Data Set
 
 Tidy Name | Original Variable Name | Variable Type | Allowable Values |
 ----------|----------|---------------|------------------|
@@ -118,9 +121,11 @@ frequencyBodyBodyGyroJerkMagstd | fBodyBodyGyroJerkMag-std() | Numeric |        
 
 Note that the allowable values for the numeric variables are left blank since no information was provided in the reference input data set. The original activity variable (integer:1...6) values for each observation are listed in the y_test.txt and y_train.txt files while the corresponding allowable labels are extracted from the activity_labels.txt file. The integer values of the activity variable are replaced with their corresponding character labels. The values of the subject variable for each observation are listed in the subjects_test.txt and subjects_train.txt files. The mean and standard measurement variables values for each observation are listed in the X_train.txt and X_test.txt. The name for each of these measurement variables are extracted from the features.txt file. Pre-processing is done on the variable names to make it tidy. This cleaning process is documented in the README.md file in the top level of this repository.
 
+## Tidy Data Set
+
 The variables in Table 1 form an intermediary data set for generating the final required tidy data set. The tidy data set is composed of the variables defined in Table 2.
 
-## Table 2: Tidy Data Set Variables
+#### Table 2: Tidy Data Set Variables
 
 Variable Name | Variable Type | Allowable Values |
 --------------|---------------|------------------|
