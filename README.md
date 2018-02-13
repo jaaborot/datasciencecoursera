@@ -48,13 +48,12 @@ angle_cols <- grep("angle", features$V2)
 mean_std_cols <- setdiff(sort(c(mean_cols, std_cols)), c(angle_cols, meanFreq_cols))
 ```
 
-The objects ```mean_cols```, ```std_cols```, ```meanFreq_cols```, ```angle_cols```, and ```mean_std_cols``` are all list of indices of variable names. ```mean_cols``` is a list of all variable names which have an occurrence of the pattern ```[Mm]ean```. ```std_cols``` is a list of all variable names which have an occurrence of the pattern ```[Ss]td```. ```meanFreq_cols``` is a list of variable names corresponding to the computed mean frequency value while ```angle_cols``` is a list of variable names which have an occurrence of the pattern ```angle```. The list of indices of variable names which are only relevant to the goal in the course project is computed using the set difference between ```mean_cols``` union ```std_cols``` and ```meanFreq_cols``` union ```angle_cols```. This list is assigned to the ```mean_std_cols``` object. 
+The objects ```mean_cols```, ```std_cols```, ```meanFreq_cols```, ```angle_cols```, and ```mean_std_cols``` are all list of indices of variable names. ```mean_cols``` is a list of all variable names which have an occurrence of the pattern ```[Mm]ean```. ```std_cols``` is a list of all variable names which have an occurrence of the pattern ```[Ss]td```. ```meanFreq_cols``` is a list of variable names corresponding to the computed mean frequency value while ```angle_cols``` is a list of variable names which have an occurrence of the pattern ```angle```. The list of indices of variable names which are only relevant to the goal in the course project is computed using the set difference between ```mean_cols``` union ```std_cols``` and ```meanFreq_cols``` union ```angle_cols```. This list is computed using the ```setdiff(.)``` function in R and is assigned to the ```mean_std_cols``` object.
 
+## Loading the test data set
+In order to load the test data set, we need to load the contents of X_test.txt, y_test.txt, and subject_test.txt.
 
-<!--
-
-########## construct the test data set out of X_test, y_test, activity and subject ##########
-
+```
 # load the X test data
 X_test <- read.table(file = "./projectdata/test/X_test.txt")
 X_test <- X_test[, sort(mean_std_cols)]
@@ -87,6 +86,12 @@ test_dataset_tbl <- tbl_df(test_dataset)
 
 # move the subject data column to the first column of dataset1 
 test_dataset_tbl <- test_dataset_tbl[c(dim(test_dataset_tbl)[2], 1:dim(test_dataset_tbl)[2]-1)]
+```
+
+<!--
+
+########## construct the test data set out of X_test, y_test, activity and subject ##########
+
 
 ########## construct the train data set out of X_train, y_train, activity and subjects ##########
 # load the X test data
