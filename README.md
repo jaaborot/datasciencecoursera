@@ -152,7 +152,7 @@ train_test_dataset <- rbind(train_dataset_tbl, test_dataset_tbl)
 
 The variables of the tidy data set which will be generated correspond to the average of the variables in the generated ```train_test_dataset``` data frame. To construct such data set, we use the ```aggregate(.)``` function of the ```stats``` package in R. We specify as input into the ```aggregate``` function the 3rd up to the last column of the ```train_test_dataset```, the ```activity``` and ```subject``` variables of the ```train_test_dataset``` data frame as grouping elements of the averages, and the ```mean(.)``` function of the base R package as the function to be applied to the variables in ```train_test_dataset```.
 
-```
+```r
 tidy_dataset <- aggregate(train_test_dataset[, 3:dim(train_test_dataset)[2]], list(train_test_dataset$activity, train_test_dataset$subject), mean)
 ```
 
