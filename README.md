@@ -148,6 +148,14 @@ To construct the intermediate data set, we combine the rows of the training data
 train_test_dataset <- rbind(train_dataset_tbl, test_dataset_tbl)
 ```
 
+## Generating the tidy data
+
+The variables of the tidy data set which will be generated correspond to the average of the variables in the generated ```train_test_dataset``` data frame. To construct such data set, we use the ```aggregate(.)``` function of the ```stats``` package in R. We specify as input into the ```aggregate``` function the 3rd up to the last column of the ```train_test_dataset```, the ```activity``` and ```subject``` variables of the ```train_test_dataset``` data frame as grouping elements of the averages, and the ```mean(.)``` function of the base R package as the function to be applied to the variables in ```train_test_dataset```.
+
+```
+tidy_dataset <- aggregate(train_test_dataset[, 3:dim(train_test_dataset)[2]], list(train_test_dataset$activity, train_test_dataset$subject), mean)
+```
+
 <!--
 
 ########## construct the test data set out of X_test, y_test, activity and subject ##########
@@ -160,11 +168,10 @@ train_test_dataset <- rbind(train_dataset_tbl, test_dataset_tbl)
 # done in the previous lines
 
 # 5. Create a second tidy dataset, dataset2, from dataset1 with the additional data of average of each variable for each activity and each subject.
-train_test_dataset_gby <- group_by(train_test_dataset, activity, subject)
+# train_test_dataset_gby <- group_by(train_test_dataset, activity, subject)
 
 ######## Step 5 ########
 # From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-tidy_dataset <- aggregate(train_test_dataset[, 3:dim(train_test_dataset)[2]], list(train_test_dataset$activity, train_test_dataset$subject), mean)
 
 # tidy the name of each variable
 names(tidy_dataset)[1] <- 'activity'
